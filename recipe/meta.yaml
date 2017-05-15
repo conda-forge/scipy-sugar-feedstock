@@ -1,6 +1,6 @@
 {% set name = "scipy-sugar" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "6b7a2b52d8d3cec6e25444178f455b24793ed9cd65b05c8dca35b0c4e3d24a89" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "2942681512256c40bc7801a38701b12b5dff413dd6c4d04aafd1ee79d36529b1" %}
 
 package:
   name: {{ name|lower }}
@@ -33,13 +33,13 @@ test:
     - python -c "import sys; import scipy_sugar; sys.exit(scipy_sugar.test())"
 
 about:
-  home: http://github.com/glimix/scipy-sugar
+  home: https://github.com/limix/scipy-sugar
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: 'Missing SciPy functionalities'
   doc_url: https://scipy-sugar.readthedocs.io/
-  dev_url: https://github.com/glimix/scipy-sugar
+  dev_url: https://github.com/limix/scipy-sugar
 
 extra:
   recipe-maintainers:
