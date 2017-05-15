@@ -1,7 +1,7 @@
 About scipy-sugar
 =================
 
-Home: http://github.com/glimix/scipy-sugar
+Home: https://github.com/limix/scipy-sugar
 
 Package license: MIT
 
