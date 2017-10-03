@@ -28,6 +28,7 @@ test:
   requires:
     - pytest >=3
     - pytest-pep8
+    - pytest-sugar
   imports:
     - scipy_sugar
   commands:
