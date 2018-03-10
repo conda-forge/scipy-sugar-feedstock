@@ -1,6 +1,6 @@
 {% set name = "scipy-sugar" %}
-{% set version = "1.0.4" %}
-{% set sha256 = "12a4c04dc80823831363e88d11e4491e580b9ebbb55797683ee3c0c5b12c55c8" %}
+{% set version = "1.0.6" %}
+{% set sha256 = "d06fd7a301dcb3e9d178f3d9bb6f796ce999781c2cc4f9e08fab2c65ef0e3abf" %}
 
 package:
   name: {{ name|lower }}
@@ -19,7 +19,10 @@ requirements:
   build:
     - python
     - pytest-runner
-    - setuptools
+    - setuptools >=37.0.0
+    - pypandoc
+    - wheel
+    - pip
   run:
     - python
     - numpy
@@ -29,7 +32,6 @@ test:
   requires:
     - pytest >=3
     - pytest-pep8
-    - pytest-sugar
   imports:
     - scipy_sugar
   commands:
@@ -39,7 +41,7 @@ about:
   home: https://github.com/limix/scipy-sugar
   license: MIT
   license_family: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE.md
   summary: 'Missing SciPy functionalities'
   doc_url: https://scipy-sugar.readthedocs.io/
   dev_url: https://github.com/limix/scipy-sugar
