@@ -1,6 +1,6 @@
 {% set name = "scipy-sugar" %}
-{% set version = "1.0.6" %}
-{% set sha256 = "d06fd7a301dcb3e9d178f3d9bb6f796ce999781c2cc4f9e08fab2c65ef0e3abf" %}
+{% set version = "1.0.7" %}
+{% set sha256 = "4d03047641311b7b4cbe60f59a41f1fc46852b7ea0184c6fff204b7e5537fbb4" %}
 
 package:
   name: {{ name|lower }}
