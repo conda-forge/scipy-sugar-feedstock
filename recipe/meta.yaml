@@ -28,11 +28,12 @@ requirements:
     - python
     - numpy
     - scipy
+    - pytest-doctestplus
 
 test:
   requires:
     - pytest >=3
-    - pytest-pep8
+    - pytest-doctestplus
   imports:
     - scipy_sugar
   commands:
