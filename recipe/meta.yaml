@@ -8,24 +8,24 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pytest-runner
     - setuptools >=37.0.0
     - pypandoc
     - wheel
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - numpy
     - scipy
     - pytest-doctestplus
@@ -34,6 +34,7 @@ test:
   requires:
     - pytest >=3
     - pytest-doctestplus
+    - python {{ python_min }}
   imports:
     - scipy_sugar
   commands:
